@@ -60,4 +60,43 @@ class PalindromeValidatorTest {
 
     }
 
+    @Test
+    void Given_4LetterPalindromeString_When_ValidatingPalindrome_Then_True() {
+        // Given
+        String string = "abba";
+        // When
+        boolean actualResult = val.validate(string);
+
+        // Then
+        boolean expectedResult = true;
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void Given_4LetterNonPalindromeString_When_ValidatingPalindrome_Then_False() {
+        // Given
+        String string = "abda";
+        // When
+        boolean actualResult = val.validate(string);
+
+        // Then
+        boolean expectedResult = false;
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    void Given_APalindromePhraseString_When_ValidatingPalindrome_Then_False() {
+        // Given
+        String string = "a man a plan a canal panama";
+        // When
+        boolean actualResult = val.validate(string);
+
+        // Then
+        boolean expectedResult = false;
+        assertEquals(expectedResult, actualResult);
+
+    }
+
 }
