@@ -47,4 +47,17 @@ class PalindromeValidatorTest {
 
     }
 
+    @Test
+    void Given_3LetterPalindromeString_When_ValidatingPalindrome_Then_True() {
+        // Given
+        String string = "aba";
+        // When
+        boolean actualResult = val.validate(string);
+
+        // Then
+        boolean expectedResult = true;
+        assertEquals(expectedResult, actualResult);
+
+    }
+
 }

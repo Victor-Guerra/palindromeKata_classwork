@@ -2,14 +2,11 @@ package mx.tec.kata;
 
 public class PalindromeValidator {
     public boolean validate(String string) {
-        if(string.length() == 1) {
-           return true; 
+        for ( int i = 0; i < string.length() / 2; i++) {
+            if(string.charAt(i) != string.charAt(string.length() - 1 - i)) {
+                return false;
+            }
         }
-        else if ( sting.length() == 2 && string.charAt(0) == string.charAt(1)) {
-            return true;
-        }
-
-        return false;
+        return true;
     }
-
 }
